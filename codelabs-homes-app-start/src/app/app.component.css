@@ -1,0 +1,190 @@
+
+/* Import a modern font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+/* General layout */
+main {
+  font-family: 'Montserrat';
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+#name {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+#menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+#menu li {
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#menu li:hover {
+  color: #69a5d9;
+}
+
+/* Welcome section */
+.welcomeSection {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.welcomeSection h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.welcomeSection p {
+  font-size: 18px;
+  color: #666;
+}
+
+
+/* Projects section */
+  .projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    width: 100%;
+    background-color: white;
+  }
+  
+  .card {
+    perspective: 1000px;
+    margin: 1vw;
+    width: 46%;
+    height: 50%;
+  }
+  
+  .card_inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+  
+  .card_inner > .card_front {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    overflow:visible;
+    padding: 20px;
+  }
+  .card_inner > .card_back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    overflow:visible;
+    padding: 20px;
+  }
+  
+  .card:hover .card_inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card_front, .card_back {
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .card_front {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card_back {
+    background-color: #fff;
+    transform: rotateY(180deg);
+  }
+  
+  .card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .card_title {
+    font-size: 20px;
+    color: #333;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+  }
+  
+  
+  .card__description {
+    font-size: 10px;
+    color: #777;
+    line-height: 1.4;
+    margin-top: 1vh;
+    text-align: center;
+  }
+  
+  .card a {
+    color: #007bff;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .card a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Disclaimer section */
+  .disclaimer {
+    text-align: center;
+    margin-top: 4vh;
+    padding: 2vw;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .disclaimer h3 {
+    font-size: 1.8vw;
+    color: #666;
+    margin: 1vh 0;
+  }
+  
