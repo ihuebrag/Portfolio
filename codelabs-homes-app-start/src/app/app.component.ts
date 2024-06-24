@@ -23,7 +23,7 @@ import { ProjectsComponent } from './projects/projects.component';
     <h1>Welcome!</h1>  
     <p> Little description of Portfolio </p>
   </section>
-  <h1> Projects </h1>
+  <h1 class="projectTitle"> Projects </h1>
   <section class="projects-container">
     <div *ngFor="let project of projectsTemplateList" class="card">
       <div class="card_inner">
@@ -66,7 +66,7 @@ export class AppComponent {
       name: "Purdue Supplier Diversity Management",
       dateStarted: "August 2022",
       photo: "/assets/PSDMProjectSC.jpeg",
-      linkToProject: "https://4bbf33fd-962e-499e-8cfd-00f53a65a5f9-00-3uln3y9igjt61.worf.replit.dev/",
+      linkToProject: "https://purduesuppliermanagementdatabase.tiiny.site/",
       linkToGithub:"https://github.com/TheDataMine/f2022-s2023-purdue-supplier-management",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
     },

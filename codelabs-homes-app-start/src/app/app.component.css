@@ -4,15 +4,18 @@
 
 /* General layout */
 main {
+  background-image: url(src\assets\canvaDesign.png);
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the image horizontally and vertically */
+  background-repeat: repeat; /* Prevents the image from repeating */
   font-family: 'Montserrat';
   margin: 0;
   padding: 0;
-  background-color: #f8f9fa;
+  background-color: #FF914D;
   color: #333;
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+  max-width: 97%;
+  border-radius: 10px;
+  padding: 2%;
 }
 
 /* Header styling */
@@ -22,6 +25,7 @@ main {
   align-items: center;
   padding: 20px 0;
   border-bottom: 1px solid #eaeaea;
+  color: rgb(255, 240, 213);
 }
 
 #name {
@@ -51,33 +55,42 @@ main {
 .welcomeSection {
   text-align: center;
   margin: 40px 0;
+  color: rgb(255, 255, 255);
 }
 
 .welcomeSection h1 {
-  font-size: 36px;
+  font-size: 50px;
   margin-bottom: 20px;
 }
 
 .welcomeSection p {
   font-size: 18px;
-  color: #666;
+  color: rgb(255, 240, 213);
 }
 
 
 /* Projects section */
+  .projectTitle {
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+  }
   .projects-container {
     display: flex;
     justify-content: center;
     gap: 2%;
     width: 100%;
-    background-color: white;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
   }
   
   .card {
     perspective: 1000px;
-    margin: 1vw;
-    width: 46%;
-    height: 50%;
+    width: 48%;
+    height: 100%;
+    padding: 2%;
+    justify-content: center;
+    align-items: center;
   }
   
   .card_inner {
@@ -100,7 +113,6 @@ main {
     justify-content: center;
     border-radius: 10px;
     overflow:visible;
-    padding: 20px;
   }
   .card_inner > .card_back {
     position: absolute;
@@ -114,7 +126,6 @@ main {
     justify-content: center;
     border-radius: 10px;
     overflow:visible;
-    padding: 20px;
   }
   
   .card:hover .card_inner {
@@ -163,6 +174,7 @@ main {
   }
   
   .card a {
+    font-size: small;
     color: #007bff;
     text-decoration: none;
     display: inline-block;
