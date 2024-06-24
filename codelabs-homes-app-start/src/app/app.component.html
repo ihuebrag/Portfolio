@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section class="header">
+          <div id="name"> Irene Huebra Garcia </div>
+          <div id="menu">
+            <ul>
+              <li><a href="/app.component.html"> Portfolio </a></li>
+              <li><a href="./about/about.component.html"> About </a></li>
+              <li><a> Resume </a></li>
+            </ul>
+          </div>
+          <router-outlet></router-outlet>
+        </section>
+        <section class="welcomeSection">
+          <h1>Welcome!</h1>  
+          <div class="imageCrop">
+            <img src="/assets/Headshot.jpg" alt="Headshot of author">
+          </div>
+          <p> Little description of Portfolio... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+          </p>
+        </section>
+        <h1 class="projectTitle"> Projects </h1>
+        <section class="projects-container">
+          <div *ngFor="let project of projectsTemplateList" class="card">
+            <div class="card_inner">
+              <div class="card_front">
+                <img [src]="project?.photo" alt="{{ project.name }} project photo">
+              </div>
+              <div class="card_back">
+                <h2 class="card_title"> {{project.name}}</h2>
+                <p>Date Started: {{ project.dateStarted }}</p>
+                <p class="card__description"> {{project.description}} </p>
+                <p><a [href]="project.linkToProject" target="_blank">View Project</a></p>
+                <p><a [href]="project.linkToGithub" target="_blank">View Code on GitHub</a></p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="disclaimer"> 
+          <h3> To learn more about me please visit the About page!</h3>
+          <h3> To contact me please visit the Contact page!</h3>
+        </section>
+      </main>
+      
+</body>
+</html>
