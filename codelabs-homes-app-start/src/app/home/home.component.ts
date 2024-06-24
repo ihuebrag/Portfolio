@@ -23,7 +23,6 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
               <li><a> Resume </a></li>
             </ul>
           </div>
-          <router-outlet></router-outlet>
         </section>
         <section class="welcomeSection">
           <h1>Welcome!</h1>  
@@ -42,18 +41,26 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
               </div>
               <div class="card_back">
                 <h2 class="card_title"> {{project.name}}</h2>
-                <p>Date Started: {{ project.dateStarted }}</p>
+                <p class="card_date">Date Started: {{ project.dateStarted }}</p>
                 <p class="card__description"> {{project.description}} </p>
-                <p><a [href]="project.linkToProject" target="_blank">View Project</a></p>
-                <p><a [href]="project.linkToGithub" target="_blank">View Code on GitHub</a></p>
+                <p *ngIf="project.linkToProject"><a [href]="project.linkToProject" target="_blank">Visit Project</a></p>
+                <p><a [href]="project.linkToGithub" target="_blank">View Project GitHub</a></p>
               </div>
             </div>
           </div>
         </section>
         <section class="disclaimer"> 
-          <h3> To learn more about me please visit the About page!</h3>
-          <h3> To contact me please visit the Contact page!</h3>
+          <div id="Contact">
+            <h3>Contact Info:</h3>
+            <ul>
+              <li><a href="https://www.linkedin.com/in/irene-huebra/"> LinkedIn</a> </li>
+              <li> Email: <a href="mailto:irene@huebra.es"> irene@huebra.es </a> </li>
+              <li> Phone: +1 (317) 774-6651 </li>
+            </ul>
+          </div>
+          <h3> To learn more about me please visit the <a routerLink="/about"> About </a> page!</h3>
         </section>
+        <router-outlet></router-outlet>
       </main>
   `,
   styleUrls: ['./home.component.css']
@@ -63,14 +70,14 @@ export class HomeComponent {
     {
       name: "Good Morning",
       dateStarted: "May 2024",
-      photo: "/assets/GoodMorningProjectSC.jpeg",
+      photo: "/assets/GoodMorningProjectSS.jpg",
       linkToProject: "https://goodmorningmom.000webhostapp.com/",
       linkToGithub: "https://github.com/ihuebrag/Daily-Good-Mornings",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
     },
     {
       name: "Purdue Supplier Diversity Management",
-      dateStarted: "August 2022",
+      dateStarted: "Aug 2022",
       photo: "/assets/PSDMProjectSC.jpeg",
       linkToProject: "https://purduesuppliermanagementdatabase.tiiny.site/",
       linkToGithub:"https://github.com/TheDataMine/f2022-s2023-purdue-supplier-management",
@@ -78,8 +85,8 @@ export class HomeComponent {
     },
     {
       name: "The Marketplace",
-      dateStarted: "October 2022",
-      photo: "",
+      dateStarted: "Oct 2022",
+      photo: "/assets/TheMarketplaceSS.png",
       linkToProject: "",
       linkToGithub:"https://github.com/ihuebrag/The-Marketplace/tree/main",
       description: "",
