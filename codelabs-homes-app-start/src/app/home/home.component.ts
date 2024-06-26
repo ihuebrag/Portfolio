@@ -91,7 +91,13 @@ export class HomeComponent {
       photo: "/assets/GoodMorningProjectSS.jpg",
       linkToProject: "https://goodmorningmom.000webhostapp.com/",
       linkToGithub: "https://github.com/ihuebrag/Daily-Good-Mornings",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+      description: `
+[Description] Website that generates a new image to wish a good morning to people. Also has a Daily Quote generator and library with a collection of images.\n
+[Methodology]\n
+  + CSS, HTML, JavaScript: For front-end development.\n
+  + PHP: For backend processing and automation\n
+[Results] A functional website users can interact with to send a good morning message to others.\n
+      `,
       skills: ["CSS", "HTML", "JavaScript"],
     },
     {
@@ -101,7 +107,18 @@ export class HomeComponent {
       photo: "/assets/PSDMProjectSC.jpeg",
       linkToProject: "https://purduesuppliermanagementdatabase.tiiny.site/",
       linkToGithub:"https://github.com/TheDataMine/f2022-s2023-purdue-supplier-management",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+      description: `
+[Description] Website to provide resources and guidelines for suppliers looking to work with Purdue University.\n
+[Methodology]\n
+  + Agile teamwork: Ensured rapid and flexible development.\n
+  + CSS, HTML, JavaScript: For front-end development.\n
+  + SQL: For database management.\n
+  + Python: For backend processing and automation.\n
+[Results]\n
+  - Streamlined supplier registration process.\n
+  - Enhanced compliance tracking.\n
+  - Improved support for diverse supplier partnerships.\n
+      `,
       skills: ["CSS", "HTML", "JavaScript", "Tableau"],
     },
     {
@@ -111,7 +128,12 @@ export class HomeComponent {
       photo: "/assets/TheMarketplaceSS.png",
       linkToProject: "",
       linkToGithub:"https://github.com/ihuebrag/The-Marketplace/tree/main",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+      description:  `
+[Description] A GUI in Java that makes use of servers and clients to create a marketplace for users that can use the seller or customer interfaces to either sell or buy goods respectively.\n
+[Methodology]\n
+  + Teamwork: 2 Back-End Developers & 2 Front-End Developers\n
+  + Java: For Full-Stack Development
+        `,
       skills: ["Java"],
     },
   ];
