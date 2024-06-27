@@ -364,7 +364,7 @@ main {
       }
   }
 
-  @media (min-width:501px) and (max-width:980px) {
+  @media (min-width:501px) and (max-width:1250px) {
     .disclaimer h3 {
       font-size: 18px;
     }
