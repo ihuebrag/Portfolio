@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { ProjectsComponent } from '../projects/projects.component';
 import { ProjectsTemplate } from '../projects-template';
 import { ActivatedRoute, RouterModule } from '@angular/router';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { ViewEncapsulation  } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -12,6 +14,7 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
     ProjectsComponent,
     RouterModule
   ],
+  encapsulation: ViewEncapsulation.None, // this will allow innerHTML to apply the CSS <- used in project descriptions
   template: `
     <main>
         <section class="header">
@@ -48,7 +51,7 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
                   <img>
                   <h2 class="card_title"> {{project.name}}</h2>
                   <p class="card_date">Date Started: {{ project.dateStarted }}</p>
-                  <p class="card__description"> {{project.description}} </p>
+                  <p class="card__description" [innerHTML]="project.description"></p>
                   <div class="bottomPanel"> 
                     <div class="skillImg">
                       <img *ngFor="let skill of project.skills" [src]="'/assets/skills/' + skill.toLowerCase() + '.png'" [alt]="skill">
@@ -92,11 +95,11 @@ export class HomeComponent {
       linkToProject: "https://goodmorningmom.000webhostapp.com/",
       linkToGithub: "https://github.com/ihuebrag/Daily-Good-Mornings",
       description: `
-[Description] Website that generates a new image to wish a good morning to people. Also has a Daily Quote generator and library with a collection of images.\n
-[Methodology]\n
-  + CSS, HTML, JavaScript: For front-end development.\n
-  + PHP: For backend processing and automation\n
-[Results] A functional website users can interact with to send a good morning message to others.\n
+      <span class="highlight"> Description </span> Website that generates a new image to wish a good morning to people. Also has a Daily Quote generator and library with a collection of images.<br>
+      <span class="highlight"> Methodology </span><br>
+      + <span class="highlight">CSS, HTML, JavaScript</span>: For front-end development.<br>
+      + <span class="highlight">PHP</span>: For backend processing and automation<br>
+      <span class="highlight"> Results </span> A functional website users can interact with to send a good morning message to others.<br>
       `,
       skills: ["CSS", "HTML", "JavaScript"],
     },
@@ -108,16 +111,13 @@ export class HomeComponent {
       linkToProject: "https://purduesuppliermanagementdatabase.tiiny.site/",
       linkToGithub:"https://github.com/TheDataMine/f2022-s2023-purdue-supplier-management",
       description: `
-[Description] Website to provide resources and guidelines for suppliers looking to work with Purdue University.\n
-[Methodology]\n
-  + Agile teamwork: Ensured rapid and flexible development.\n
-  + CSS, HTML, JavaScript: For front-end development.\n
-  + SQL: For database management.\n
-  + Python: For backend processing and automation.\n
-[Results]\n
-  - Streamlined supplier registration process.\n
-  - Enhanced compliance tracking.\n
-  - Improved support for diverse supplier partnerships.\n
+<span class="highlight"> Description </span>  Website to provide resources and guidelines for suppliers looking to work with Purdue University.<br>
+<span class="highlight"> Methodology </span><br>
+  + <span class="highlight">Agile teamwork</span>: Ensured rapid and flexible development.<br>
+  + <span class="highlight">CSS, HTML, JavaScript</span>: For front-end development.<br>
+  + <span class="highlight">SQL</span>: For database management.<br>
+  + <span class="highlight">Python</span>: For backend processing and automation.<br>
+<span class="highlight"> Results </span> Improved support for diverse supplier partnerships and data visualization.<br>
       `,
       skills: ["CSS", "HTML", "JavaScript", "Tableau"],
     },
@@ -129,10 +129,10 @@ export class HomeComponent {
       linkToProject: "",
       linkToGithub:"https://github.com/ihuebrag/The-Marketplace/tree/main",
       description:  `
-[Description] A GUI in Java that makes use of servers and clients to create a marketplace for users that can use the seller or customer interfaces to either sell or buy goods respectively.\n
-[Methodology]\n
-  + Teamwork: 2 Back-End Developers & 2 Front-End Developers\n
-  + Java: For Full-Stack Development
+<span class="highlight"> Description </span> A GUI in Java that makes use of servers and clients to create a marketplace for users that can use the seller or customer interfaces to either sell or buy goods respectively.<br>
+<span class="highlight"> Methodology </span><br>
+  + <span class="highlight">Teamwork</span>: 2 Back-End Developers & 2 Front-End Developers<br>
+  + <span class="highlight">Java</span>: For Full-Stack Development<br>
         `,
       skills: ["Java"],
     },
