@@ -1,37 +1,63 @@
 
-/* Import a modern font */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
-
 /* General layout */
-main {
-  background-image: url(src/assets/motherboardBackgroundV2.jpg);  
-  background-size:cover;
-  background-position: center; /* Centers the image horizontally and vertically */
-  font-family: Monospace, 'Montserrat';
+
+#background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('src/assets/motherboardBackgroundBlurMid.jpg'); /* Update this path to your background image */
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+
+.main {
+  position: relative;
+  z-index: 3;
+  font-family: monospace;
   margin: 0;
   background-color: #000000;
   color: #333;
   max-width: 100%;
   border-radius: 10px;
-  padding-left: 8%;
-  padding-right: 8%;
+  padding-left: 10%;
+  padding-right: 10%;
   padding-top: 2%;
   padding-bottom: 2%;
 }
 
-/* Header styling */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
+  padding-left: 10%;
+  padding-right: 10%;
   border-bottom: 1px solid #f0f0f0;
   color: rgb(255, 255, 255);
+  font-family: monospace;
+  background-color: rgb(0, 0, 0, .8);
+  position: fixed;
+  z-index: 4;
+  width: 100%;
 }
 
 #name {
   font-size: 24px;
   font-weight: 700;
+  white-space: nowrap; /* Ensure name stays in one line */
 }
 
 #menu ul {
@@ -39,6 +65,8 @@ main {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap; /* Allow menu items to wrap */
+  justify-content: end;
 }
 
 #menu li {
@@ -46,27 +74,32 @@ main {
   right: 0;
   font-size: 18px;
   font-weight: 500;
-  cursor: pointer;
 }
 
-#menu li:hover {
+#menu a:hover {
   color: #32cbf1;
 }
 
 #menu a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
 /* Welcome section */
 .welcomeSection {
+  font-family: monospace;
   text-align: center;
-  display: grid;
-  grid-template-columns: 40% 60%;
+  display: grid;  
+  grid-template-columns: 60% 40%;
   grid-template-rows: 2;
-  margin: 40px 0;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 150px;
+  padding-bottom: 5%;
   color: rgb(255, 255, 255);
-  padding-bottom: 3%;
+  position: relative;
+  z-index: 3; /* Set z-index to ensure it's above the particles */
 }
 
 .welcomeSection h1 {
@@ -78,14 +111,13 @@ main {
   text-align: left;
 }
 
-.welcomeSection p {
-  
+.commandBox {
   font: inherit;
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
   grid-row: 2;
-  grid-column: 1/3;
+  grid-column: span 3;
   text-align: middle;
   padding: 1%;
   padding-left: 2%;
@@ -95,11 +127,12 @@ main {
   font-family: monospace;
   color: #eaeaea;
   background-color: rgb(0, 0, 0, .8);
-  border:solid #ffffff 2px;
+  border:solid #dddddd 2px;
   border-radius: 10px;
 }
 
-.welcomeSection p::after {
+
+.commandBox::after {
   content: "";
   width: 10px;
   height: 25px;
@@ -117,15 +150,20 @@ main {
 
 /* Projects section */
   .projectsHeader {
+    font-family: monospace;
     display: flex;
     flex-direction: row;
+    position: relative;
+    font-size: large;
   }
 
   .projectTitle {
     font-size: 60px;
     color: rgb(255, 255, 255);
     font-weight: 600;
+    padding-left: 10%;
   }
+
   #languages{
     width: 25em;
     height: 30%;
@@ -134,16 +172,17 @@ main {
 
 
   .projects-container {
-    border:solid #ffffff 2px;
-    padding: 2%;
+    border:solid #dddddd 2px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
+    width: 80%;
     height: max-content;
     background-color: rgba(0, 0, 0, 0.75);
+    z-index: 3; /* Set z-index to ensure it's above the particles */
+    position: relative; /* Ensure z-index is applied properly */    margin-left: 10%;
+    padding: 2%;
   }
   
   .card {
@@ -166,6 +205,7 @@ main {
     gap: 2%;
     width: 100%;
     height: 100%;
+    font-family: monospace;
   }
   
   .card_content > .card_image {
@@ -300,23 +340,46 @@ main {
     margin-top: 2%;
     font: inherit;
     font-family: inherit;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
-    padding: 1%;
-    padding-left: 2%;
-    padding-right: 2%;
     text-align: left;
     font-family: monospace;
     color: #eaeaea;
     background-color: rgba(0, 0, 0, 0.8);
-    border:solid #ffffff 2px;
+    border:solid #dddddd 2px;
     border-radius: 10px;
+    padding: 2%;
+    position: relative;
+    z-index: 3;
+    max-width: 80%;
+    margin-left: 10%;
+
   }
   
-  .disclaimer h3 {
-    font-size: 18px;
-    /*padding-left: 5%;*/
+  .ContactTitle {
+    padding-left: 10%;
+    padding-top: 5%;
     color: #eaeaea;
+    position: relative;
+    z-index: 3;
+    font-family: monospace;
+    font-size: 60px;
+    font-weight: 700;
+
+  }
+
+  .disclaimer h3 {
+    font-size: 20px;
+  }
+
+  #Contact a {
+    text-decoration: underline;
+  }
+
+  .disclaimer ul {
+    list-style-type: none;
+    padding-left: 0; /* Removes left padding */
+    margin-left: 0; /* Removes left margin */
   }
   .disclaimer li {
     color: #eaeaea;
@@ -324,14 +387,8 @@ main {
     list-style: none;
   }
   .disclaimer a {
-    text-decoration: none;
     color: #32cbf1;
-  }
-
-  #Contact {
-    /*padding-right: 10%;
-    border-right: 2px solid #32cbf1;*/
-    text-align: left;
+    text-decoration: none;
   }
   
 
@@ -362,6 +419,25 @@ main {
       .card {
         padding: 5%;
       }
+
+  }
+
+  @media (max-width: 730px) {
+    #separators {
+      display: none;
+    }
+    #menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      text-align: end;
+    }
+    #name {
+      white-space: wrap;
+    }
+
   }
 
   @media (min-width:501px) and (max-width:1250px) {
