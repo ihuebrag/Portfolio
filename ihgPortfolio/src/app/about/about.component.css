@@ -1,0 +1,54 @@
+main {
+    background-image: url(src\assets\paintStrokes2.png);
+    background-size:cover; /*change to contain at some point*/
+    background-position: center; /* Centers the image horizontally and vertically */
+    font-family: Monospace, 'Montserrat';
+    margin: 0;
+    background-color: #000000;
+    color: #333;
+    max-width: 100%;
+    border-radius: 10px;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+  
+  /* Header styling */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+    color: rgb(255, 255, 255);
+  }
+  
+  #name {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  #menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  #menu li {
+    margin-left: 20px;
+    right: 0;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  #menu li:hover {
+    color: #32cbf1;
+  }
+  
+  #menu a {
+    text-decoration: none;
+    color: inherit;
+  }
