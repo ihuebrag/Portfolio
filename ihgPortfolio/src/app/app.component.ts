@@ -12,7 +12,6 @@ import { HomeComponent } from './home/home.component';
     HomeComponent,
   ],
   template: `
-      <app-home></app-home>
       <router-outlet></router-outlet>
   `,
   styleUrls: ['./app.component.css']
