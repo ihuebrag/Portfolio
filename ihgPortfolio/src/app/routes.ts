@@ -13,7 +13,6 @@ const routeConfig: Routes = [
       component: AboutComponent,
       title: 'About Page',
     },
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: '**', component: HomeComponent }
   ];
   export default routeConfig;
