@@ -12,7 +12,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist",
+            "outputPath": "dist/ihgsPortfolio",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -31,16 +31,24 @@
           },
           "configurations": {
             "production": {
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "6kb",
+                  "maximumError": "6kb"
                 }
               ],
               "outputHashing": "all"
@@ -60,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular.io-example:build:production"
+              "browserTarget": "ihgPortfolio:build:production"
             },
             "development": {
-              "browserTarget": "angular.io-example:build:development"
+              "browserTarget": "ihgPortfolio:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular.io-example:build"
+            "browserTarget": "ihgPortfolio:build"
           }
         },
         "test": {
@@ -96,11 +104,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular.io-example:serve"
+            "devServerTarget": "ihgPortfolio:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular.io-example:serve:production"
+              "devServerTarget": "ihgPortfolio:serve:production"
             }
           }
         }
