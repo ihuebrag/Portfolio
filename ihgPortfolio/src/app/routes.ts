@@ -6,13 +6,13 @@ const routeConfig: Routes = [
     {
       path: '',
       component: HomeComponent,
-      title: 'Home page',
+      title: 'Home',
     },
     {
       path: 'about',
       component: AboutComponent,
-      title: 'About Page',
+      title: 'About',
     },
-    { path: '**', component: HomeComponent }
+    { path: '**', component: HomeComponent, title: 'Home' }
   ];
   export default routeConfig;
