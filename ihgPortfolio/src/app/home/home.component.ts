@@ -20,6 +20,7 @@ declare var particlesJS: any;
   templateUrl: "./home.component.html",
   styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent {
   projectsTemplateList : ProjectsTemplate[] = [
     {
