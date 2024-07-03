@@ -32,10 +32,10 @@ export class HomeComponent {
       linkToGithub: "https://github.com/ihuebrag/Daily-Good-Mornings",
       description: `
       <span class="highlight"> $ Description: </span> Website that generates a new image to wish a good morning to others. Also has a Daily Quote generator and library with a collection of images.<br>
-      <span class="highlight"> $ Methodology </span><br>
-      + <span class="highlight">[CSS, HTML, JavaScript]</span>: For front-end development.<br>
-      + <span class="highlight">[PHP]</span>: For backend processing and automation<br>
-      <span class="highlight"> $ Results </span> A functional website users can interact with to send a good morning message to others.<br>
+      <span class="highlight"> $ Skills: </span><br>
+      + <span class="highlight">[CSS, HTML, JavaScript]</span> For front-end development.<br>
+      + <span class="highlight">[PHP]</span> For backend processing and automation<br>
+      <span class="highlight"> $ Results: </span> A functional website users can interact with to send a good morning message to others.<br>
       `,
       skills: ["CSS", "HTML", "JavaScript"],
     },
@@ -47,13 +47,13 @@ export class HomeComponent {
       linkToProject: "https://purduesuppliermanagementdatabase.tiiny.site/",
       linkToGithub:"https://github.com/TheDataMine/f2022-s2023-purdue-supplier-management",
       description: `
-<span class="highlight"> $ Description </span>  Website to provide resources and guidelines for suppliers looking to work with Purdue University.<br>
-<span class="highlight"> $ Methodology </span><br>
-  + <span class="highlight">[Agile teamwork]</span>: Ensured rapid and flexible development.<br>
-  + <span class="highlight">[CSS, HTML, JavaScript]</span>: For front-end development.<br>
-  + <span class="highlight">[SQL]</span>: For database management.<br>
-  + <span class="highlight">[Python]</span>: For backend processing and automation.<br>
-<span class="highlight"> $ Results </span> Improved support for diverse supplier partnerships and data visualization.<br>
+<span class="highlight"> $ Description: </span>  Website to provide resources and guidelines for suppliers looking to work with Purdue University.<br>
+<span class="highlight"> $ Skills: </span><br>
+  + <span class="highlight">[Agile teamwork]</span> Ensured rapid and flexible development.<br>
+  + <span class="highlight">[CSS, HTML, JavaScript]</span> For front-end development.<br>
+  + <span class="highlight">[SQL]</span> For database management.<br>
+  + <span class="highlight">[Python]</span> For backend processing and automation.<br>
+<span class="highlight"> $ Results: </span> Improved support for diverse supplier partnerships and data visualization.<br>
       `,
       skills: ["CSS", "HTML", "JavaScript", "Tableau"],
     },
@@ -65,10 +65,10 @@ export class HomeComponent {
       linkToProject: "",
       linkToGithub:"https://github.com/ihuebrag/The-Marketplace/tree/main",
       description:  `
-<span class="highlight"> $ Description </span> A GUI in Java that makes use of servers and clients to create a marketplace for users that can use the seller or customer interfaces to either sell or buy goods respectively.<br>
-<span class="highlight"> $ Methodology </span><br>
-  + <span class="highlight">[Teamwork]</span>: 2 Back-End Developers & 2 Front-End Developers<br>
-  + <span class="highlight">[Java]</span>: For Full-Stack Development<br>
+<span class="highlight"> $ Description: </span> A GUI in Java that makes use of servers and clients to create a marketplace for users that can use the seller or customer interfaces to either sell or buy goods respectively.<br>
+<span class="highlight"> $ Skills: </span><br>
+  + <span class="highlight">[Teamwork]</span> 2 Back-End Developers & 2 Front-End Developers<br>
+  + <span class="highlight">[Java]</span> For Full-Stack Development<br>
         `,
       skills: ["Java"],
     },
