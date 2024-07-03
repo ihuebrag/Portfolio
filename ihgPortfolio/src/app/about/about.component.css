@@ -2,6 +2,10 @@ body {
     font-family: monospace;
 }
 
+.header {
+    background-color: rgb(0,0,0, .8);
+}
+
 .aboutMeSection {
     display: flex;
     flex-direction: column;
@@ -51,7 +55,7 @@ body {
     color: inherit;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1250px) {
     .aboutContent {
         flex-direction: column;
         justify-content: center;

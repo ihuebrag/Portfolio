@@ -154,6 +154,7 @@
 
 /* Projects section */
   .projectsHeader {
+    padding-top: 5%;
     font-family: monospace;
     display: flex;
     flex-direction: row;
@@ -407,6 +408,11 @@
         flex-direction: column;
         text-align: right;
       }
+
+      .welcomeSection {
+        padding-top: 120px;
+      }
+
       .card_content {
         display: grid;
         grid-template-columns: 1;
