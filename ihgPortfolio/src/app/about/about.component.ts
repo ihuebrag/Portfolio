@@ -9,20 +9,7 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
     CommonModule,
     RouterModule
   ],
-  template:`
-  <main>
-    <section class="header">
-        <div id="name"> Irene Huebra Garcia </div>
-        <div id="menu">
-          <ul>
-            <li><a routerLink="/home"> PORTFOLIO </a></li>              
-            <li><a routerLink="/about"> ABOUT </a></li>
-            <li><a href="https://drive.google.com/file/d/1bEWn208EJUBmViB4Ti3niKmRocy-ltqn/view?usp=sharing" target="_blank"> RESUME </a></li>
-          </ul>
-        </div>
-      </section>
-  </main>
-  `,
+  templateUrl: "./about.component.html",
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent {
