@@ -34,7 +34,7 @@ export class HomeComponent {
       <span class="highlight"> $ Description: </span> Website that generates a new image to wish a good morning to others. Also has a Daily Quote generator and library with a collection of images.<br>
       <span class="highlight"> $ Skills: </span><br>
       + <span class="highlight">[CSS, HTML, JavaScript]</span> For front-end development.<br>
-      + <span class="highlight">[PHP]</span> For backend processing and automation<br>
+      + <span class="highlight">[PHP]</span> For backend processing and automation.<br>
       <span class="highlight"> $ Results: </span> A functional website users can interact with to send a good morning message to others.<br>
       `,
       skills: ["CSS", "HTML", "JavaScript"],
@@ -67,8 +67,8 @@ export class HomeComponent {
       description:  `
 <span class="highlight"> $ Description: </span> A GUI in Java that makes use of servers and clients to create a marketplace for users that can use the seller or customer interfaces to either sell or buy goods respectively.<br>
 <span class="highlight"> $ Skills: </span><br>
-  + <span class="highlight">[Teamwork]</span> 2 Back-End Developers & 2 Front-End Developers<br>
-  + <span class="highlight">[Java]</span> For Full-Stack Development<br>
+  + <span class="highlight">[Teamwork]</span> 2 Back-End Developers & 2 Front-End Developers.<br>
+  + <span class="highlight">[Java]</span> For Full-Stack Development.<br>
         `,
       skills: ["Java"],
     },
