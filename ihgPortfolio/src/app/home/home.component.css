@@ -89,6 +89,8 @@
 
 /* Welcome section */
 .welcomeSection {
+  min-height: fit-content;
+  min-height: -moz-fit-content;
   font-family: monospace;
   text-align: center;
   display: grid;  
