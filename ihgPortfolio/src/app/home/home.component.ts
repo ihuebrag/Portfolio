@@ -5,6 +5,7 @@ import { ProjectsTemplate } from '../projects-template';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ViewEncapsulation  } from '@angular/core';
+import { FloatingMenuComponent } from '../floating-menu/floating-menu.component';
 
 declare var particlesJS: any;
 
@@ -14,7 +15,8 @@ declare var particlesJS: any;
   imports: [
     CommonModule,
     ProjectsComponent,
-    RouterModule
+    RouterModule,
+    FloatingMenuComponent,
   ],
   encapsulation: ViewEncapsulation.None, // this will allow innerHTML to apply the CSS <- used in project descriptions
   templateUrl: "./home.component.html",

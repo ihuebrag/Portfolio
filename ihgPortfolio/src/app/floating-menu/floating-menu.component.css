@@ -1,0 +1,113 @@
+/* Floating Menu Styles */
+.floating-menu {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 4;
+}
+
+.floating-menu img {
+  max-width: 30px;
+  max-height: 30px;
+}
+
+
+.white-img {
+  display: none;
+}
+.floating-menu button:hover .white-img {
+  display: block;
+  z-index: 5;
+}
+.floating-menu button:hover .initial-img {
+  display: none;
+}
+
+
+.floating-menu .buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.floating-menu .buttons button {
+  border: none;
+  margin: 0 10px;
+  position: relative;
+  padding: 0.5rem;
+  background: none;
+}
+
+.floating-menu .buttons a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #4d4d4d;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease-in-out;
+}
+
+.floating-menu .buttons a:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+  color: white;
+}
+
+.floating-menu .buttons a .filled {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+.floating-menu .buttons a:hover .filled {
+  height: 100%;
+}
+
+.floating-menu .buttons .title {
+  position: absolute;
+  top: 100%;
+  right: 110%;
+  transform: translateY(200%);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.floating-menu .buttons:hover .title {
+  opacity: 1;
+  visibility: visible;
+  top: -50px;
+}
+
+.floating-menu .buttons a[data-social="linkedin"] .filled,
+.floating-menu .buttons a[data-social="linkedin"] ~ .title {
+  background-color: #0274b3;
+}
+
+.floating-menu .buttons a[data-social="github"] .filled,
+.floating-menu .buttons a[data-social="github"] ~ .title {
+  background-color: #24262a;
+}
+
+.floating-menu .buttons a[data-social="email"] .filled,
+.floating-menu .buttons a[data-social="email"] ~ .title {
+  background-color: #d44638;
+}
