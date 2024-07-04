@@ -28,13 +28,13 @@ export class HomeComponent {
       name: "Good Morning",
       dateStarted: "May 2024",
       photo: "/assets/GoodMorningProjectSS.jpg",
-      linkToProject: "https://goodmorningmom.000webhostapp.com/",
+      linkToProject: "https://dailygoodmorning.web.app",
       linkToGithub: "https://github.com/ihuebrag/Daily-Good-Mornings",
       description: `
       <span class="highlight"> $ Description: </span> Website that generates a new image to wish a good morning to others. Also has a Daily Quote generator and library with a collection of images.<br>
       <span class="highlight"> $ Skills: </span><br>
-      + <span class="highlight">[CSS, HTML, JavaScript]</span> For front-end development.<br>
-      + <span class="highlight">[PHP]</span> For backend processing and automation.<br>
+      + <span class="highlight">[CSS, HTML]</span> For front-end development.<br>
+      + <span class="highlight">[PHP, JavaScript]</span> For backend processing and automation.<br>
       <span class="highlight"> $ Results: </span> A functional website users can interact with to send a good morning message to others.<br>
       `,
       skills: ["CSS", "HTML", "JavaScript"],
