@@ -2,9 +2,6 @@ body {
     font-family: monospace;
 }
 
-.header {
-}
-
 .aboutMeSection {
     display: flex;
     flex-direction: column;
