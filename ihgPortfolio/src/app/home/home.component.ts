@@ -6,6 +6,7 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ViewEncapsulation  } from '@angular/core';
 import { FloatingMenuComponent } from '../floating-menu/floating-menu.component';
+import { Router } from '@angular/router';
 
 declare var particlesJS: any;
 
@@ -24,6 +25,7 @@ declare var particlesJS: any;
 })
 
 export class HomeComponent {
+  
   projectsTemplateList : ProjectsTemplate[] = [
     {
       id: 1,
@@ -75,7 +77,6 @@ export class HomeComponent {
       skills: ["Java"],
     },
   ];
-  route: ActivatedRoute = inject(ActivatedRoute);
 
 
   ngAfterViewInit(): void {
@@ -191,7 +192,29 @@ export class HomeComponent {
       "retina_detect": true
     });
   }
+  
+  constructor(private router: Router) { }
 
+  handleInput(userInput: string) {
+    userInput = userInput.trim().toLowerCase(); // Clean input
 
+    // Handle different commands
+    switch (userInput) {
+      case "about":
+        this.router.navigate(['/about']);
+        break;
+      case "skills":
+        this.router.navigate(['/skills']);
+        break;
+      default:
+        alert("Invalid command. Please try again.");
+        break;
+    }
 
+    // Clear input field after processing (safely)
+    const inputElement = document.getElementById('userInput') as HTMLInputElement;
+    if (inputElement) {
+      inputElement.value = '';
+    }
+  }
 }
