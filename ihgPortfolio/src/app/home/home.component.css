@@ -121,7 +121,7 @@
 }
 
 .commandBox {
-  font-weight: 400;
+  
   padding: 1%;
   padding-left: 2%;
   padding-right: 2%;
@@ -136,10 +136,11 @@
   display: flex; /* Display as flex container */
   flex-wrap: wrap; /* Allow wrapping of content */
   align-items: center; /* Align items vertically in center */
+  font-weight: 400;
 }
 
 #userInput {
-  background-color: #000000;
+  background-color: transparent;
   border: none;
   font-size: 20px; /* Font size of the text */
   width: 275px; /* Width of the input box */

@@ -196,7 +196,7 @@ export class HomeComponent {
   }
   
 
-  
+
   @ViewChild('projectsHeader') projectsHeader!: ElementRef; //this allows to scroll down
 
   constructor(private router: Router) {} // this allows between page navigation
@@ -220,7 +220,7 @@ export class HomeComponent {
         window.open('https://www.linkedin.com/in/irene-huebra/', '_blank');
         break;
       default:
-        alert('Not a valid command! Try to cd into "projects", "about", or "resume" :)');
+        alert('Not a valid command! Try to cd into Projects, About, Resume, GitHub, or LinkedIn :) \nFor example: cd projects');
     }
     form.reset(); // Clear the input after submit
   }

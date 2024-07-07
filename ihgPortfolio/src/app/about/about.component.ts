@@ -1,6 +1,10 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ElementRef, ViewChild  } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { HomeComponent } from '../home/home.component';
+import { Router } from '@angular/router';
+
 
 declare var particlesJS: any; // if this isn't here, particlesJS can't be found
 
@@ -9,7 +13,9 @@ declare var particlesJS: any; // if this isn't here, particlesJS can't be found
   standalone: true,
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    HomeComponent,
+    FormsModule
   ],
   templateUrl: "./about.component.html",
   styleUrls: ['./about.component.css', '../home/home.component.css']
@@ -129,6 +135,41 @@ export class AboutComponent {
       },
       "retina_detect": true
     });
+  }
+
+  @ViewChild('projectsHeader') projectsHeader!: ElementRef; //this allows to scroll down
+
+  constructor(private router: Router) {} // this allows between page navigation
+
+  onSubmit(form: any) {
+    const section = form.value.section.trim().toLowerCase();
+    switch (section) {
+      case 'cd home':
+        this.router.navigate(['']);
+        break;
+      case 'cd projects':
+        this.scrollToSection(this.projectsHeader);
+        break;
+      case 'cd about':
+        this.router.navigate(['/about']);
+        break;
+      case 'cd resume':
+        window.open('https://drive.google.com/file/d/1bEWn208EJUBmViB4Ti3niKmRocy-ltqn/view?usp=sharing', '_blank');
+        break;
+      case 'cd github':
+        window.open('https://github.com/ihuebrag', '_blank');
+        break;
+      case 'cd linkedin':
+        window.open('https://www.linkedin.com/in/irene-huebra/', '_blank');
+        break;
+      default:
+        alert('Not a valid command! Try to cd into the start page (home), Projects, About, Resume, GitHub, or LinkedIn :) \nFor example: cd home');
+    }
+    form.reset(); // Clear the input after submit
+  }
+
+  private scrollToSection(section: ElementRef) {
+    section.nativeElement.scrollIntoView({ behavior: 'smooth' });
   }
 
 }
