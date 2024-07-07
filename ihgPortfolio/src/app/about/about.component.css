@@ -38,9 +38,9 @@ body {
 
 
 .aboutMeSection {
+    padding-top: 15vh;
     display: flex;
     flex-direction: column;
-    padding-bottom: 5%;
     margin-left: 10%;
     margin-right: 10%;
     position: relative;
@@ -48,7 +48,7 @@ body {
 }
 
 .aboutMeSection h1 {
-    margin-top: 150px;
+    
     width: 100%;
     color: white;
     font-size: 60px;
