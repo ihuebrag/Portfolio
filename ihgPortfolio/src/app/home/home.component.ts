@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProjectsComponent } from '../projects/projects.component';
 import { ProjectsTemplate } from '../projects-template';
@@ -7,6 +7,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ViewEncapsulation  } from '@angular/core';
 import { FloatingMenuComponent } from '../floating-menu/floating-menu.component';
 import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 declare var particlesJS: any;
 
@@ -18,6 +19,7 @@ declare var particlesJS: any;
     ProjectsComponent,
     RouterModule,
     FloatingMenuComponent,
+    FormsModule
   ],
   encapsulation: ViewEncapsulation.None, // this will allow innerHTML to apply the CSS <- used in project descriptions
   templateUrl: "./home.component.html",
@@ -193,28 +195,38 @@ export class HomeComponent {
     });
   }
   
-  constructor(private router: Router) { }
 
-  handleInput(userInput: string) {
-    userInput = userInput.trim().toLowerCase(); // Clean input
+  
+  @ViewChild('projectsHeader') projectsHeader!: ElementRef; //this allows to scroll down
 
-    // Handle different commands
-    switch (userInput) {
-      case "about":
+  constructor(private router: Router) {} // this allows between page navigation
+
+  onSubmit(form: any) {
+    const section = form.value.section.trim().toLowerCase();
+    switch (section) {
+      case 'cd projects':
+        this.scrollToSection(this.projectsHeader);
+        break;
+      case 'cd about':
         this.router.navigate(['/about']);
         break;
-      case "skills":
-        this.router.navigate(['/skills']);
+      case 'cd resume':
+        window.open('https://drive.google.com/file/d/1bEWn208EJUBmViB4Ti3niKmRocy-ltqn/view?usp=sharing', '_blank');
+        break;
+      case 'cd github':
+        window.open('https://github.com/ihuebrag', '_blank');
+        break;
+      case 'cd linkedin':
+        window.open('https://www.linkedin.com/in/irene-huebra/', '_blank');
         break;
       default:
-        alert("Invalid command. Please try again.");
-        break;
+        alert('Not a valid command! Try to cd into "projects", "about", or "resume" :)');
     }
-
-    // Clear input field after processing (safely)
-    const inputElement = document.getElementById('userInput') as HTMLInputElement;
-    if (inputElement) {
-      inputElement.value = '';
-    }
+    form.reset(); // Clear the input after submit
   }
+
+  private scrollToSection(section: ElementRef) {
+    section.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  }
+
 }

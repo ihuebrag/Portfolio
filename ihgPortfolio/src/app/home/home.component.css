@@ -22,6 +22,11 @@
   z-index: 1;
 }
 
+#userInputContainer {
+  position: relative;
+  z-index: 5;
+}
+
 
 .main {
   position: relative;
@@ -92,10 +97,10 @@
   min-height: fit-content;
   min-height: -moz-fit-content;
   font-family: monospace;
-  text-align: center;
-  display: grid;  
-  grid-template-columns: 60% 40%;
-  grid-template-rows: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2%;
   padding-left: 10%;
   padding-right: 10%;
   padding-top: 150px;
@@ -116,13 +121,7 @@
 }
 
 .commandBox {
-  font: inherit;
-  font-family: inherit;
-  font-size: 18px;
   font-weight: 400;
-  grid-row: 2;
-  grid-column: span 3;
-  text-align: middle;
   padding: 1%;
   padding-left: 2%;
   padding-right: 2%;
@@ -134,9 +133,27 @@
   border:solid #dddddd 2px;
   border-radius: 10px;
   font-size: 20px;
-
+  display: flex; /* Display as flex container */
+  flex-wrap: wrap; /* Allow wrapping of content */
+  align-items: center; /* Align items vertically in center */
 }
 
+#userInput {
+  background-color: #000000;
+  border: none;
+  font-size: 20px; /* Font size of the text */
+  width: 275px; /* Width of the input box */
+  color: white;
+  caret-shape: block;
+}
+
+#userInput::placeholder {
+  color: #999; /* Placeholder text color */
+}
+
+.commandBox:focus-within::after {
+  display: none; /* Hide the overlay when .commandBox or its descendants are focused */
+}
 
 .commandBox::after {
   content: "";

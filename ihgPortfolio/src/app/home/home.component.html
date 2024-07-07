@@ -22,18 +22,22 @@
         </section>
         <section class="welcomeSection">
           <h1>Hello World!</h1>
-          <p class="commandBox">
-            <br> <span style="color:#32cbf1"> $ Welcome to my portfolio! </span><br> <br> 
-            <span style="color:#32cbf1"> $ </span> I'm <span style="color:#32cbf1">[Irene]</span>, a passionate computer science student specializing in <span style="color:#32cbf1">[Software Engineering]</span>.
-            <br><br>  <span style="color:#32cbf1"> $ </span> Here, you'll find a showcase of my <span style="color:#32cbf1">[projects, skills, and experiences]</span> that highlight my journey in the tech world.
-            <br><br>  <span style="color:#32cbf1"> $ </span> Feel free to look around and connect with me!
-            <br><br>  <span style="color:#32cbf1"> $ </span> <!--<span id="userInputContainer"><input type="text" id="userInput" placeholder="Type your command here..." (keydown.enter)="handleInput($event)"></span>-->
-          </p>
+          <div class="commandBox">
+            <p>
+              <br> <span style="color:#32cbf1"> $ Welcome to my portfolio! </span><br> <br> 
+              <span style="color:#32cbf1"> $ </span> I'm <span style="color:#32cbf1">[Irene]</span>, a passionate computer science student specializing in <span style="color:#32cbf1">[Software Engineering]</span>.
+              <br><br>  <span style="color:#32cbf1"> $ </span> Here, you'll find a showcase of my <span style="color:#32cbf1">[projects, skills, and experiences]</span> that highlight my journey in the tech world.
+              <br><br>  <span style="color:#32cbf1"> $ </span> Feel free to look around and connect with me!
+            </p> 
+            <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+              <span id="userInputContainer"><span style="color:#32cbf1"> $ </span><input type="text" id="userInput" name="section" placeholder="Type your command here..." ngModel required></span>
+            </form> 
+          </div>
         </section>
 
       <app-floating-menu></app-floating-menu>
         
-        <section class="projectsHeader">
+        <section #projectsHeader class="projectsHeader">
           <h1 class="projectTitle"> Projects </h1>
         </section>
         <section class="projects-container">
