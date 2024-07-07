@@ -137,7 +137,7 @@ export class AboutComponent {
     });
   }
 
-  @ViewChild('projectsHeader') projectsHeader!: ElementRef; //this allows to scroll down
+  @ViewChild('educationContent') educationContent!: ElementRef; //this allows to scroll down
 
   constructor(private router: Router) {} // this allows between page navigation
 
@@ -147,8 +147,8 @@ export class AboutComponent {
       case 'cd home':
         this.router.navigate(['']);
         break;
-      case 'cd projects':
-        this.scrollToSection(this.projectsHeader);
+      case 'cd education':
+        this.scrollToSection(this.educationContent);
         break;
       case 'cd about':
         this.router.navigate(['/about']);
@@ -163,7 +163,7 @@ export class AboutComponent {
         window.open('https://www.linkedin.com/in/irene-huebra/', '_blank');
         break;
       default:
-        alert('Not a valid command! Try to cd into the start page (home), Projects, About, Resume, GitHub, or LinkedIn :) \nFor example: cd home');
+        alert('Not a valid command! Try to cd into the start page (home), Education, About, Resume, GitHub, or LinkedIn :) \nFor example: cd home');
     }
     form.reset(); // Clear the input after submit
   }
