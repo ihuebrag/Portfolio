@@ -89,20 +89,6 @@ body {
     color: inherit;
 }
 
-@media (max-width: 1250px) {
-    .aboutContent {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .aboutContent img {
-        width: 100%;
-    }
-    .aboutContent p {
-        width: 100%;
-    }
-}
-
 
 .educationContent {
     background-color: rgb(0,0,0, .8);
@@ -123,4 +109,26 @@ body {
     max-width: 300px;
     max-height: 300px;
     padding-left: 5%;
+}
+
+@media (max-width: 1250px) {
+    .aboutContent {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .aboutContent img {
+        width: 100%;
+    }
+    .aboutContent p {
+        width: 100%;
+    }
+
+    .educationContent {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10%;
+        
+    }
 }
