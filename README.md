@@ -20,7 +20,7 @@ It aims to highlight my journey and accomplishments in the tech industry.
 
 ## Usage
 
-To visit the portfolio, simply navigate to [https://ihgsportfolio.web.app/home](ihgsportfolio.web.app) in your web browser.
+To visit the portfolio, simply navigate to [ihgsportfolio.web.app](https://ihgsportfolio.web.app/home) in your web browser.
 
 ## Technologies Used
 
