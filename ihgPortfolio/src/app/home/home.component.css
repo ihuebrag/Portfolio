@@ -486,3 +486,9 @@
     }
 
   }
+
+  @media (max-width: 1000px) {
+    #userInput {    
+      font-size: 17px;
+    }
+  }
