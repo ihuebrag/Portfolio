@@ -154,7 +154,7 @@ export class AboutComponent {
         this.router.navigate(['/about']);
         break;
       case 'cd resume':
-        window.open('https://drive.google.com/file/d/1bEWn208EJUBmViB4Ti3niKmRocy-ltqn/view?usp=sharing', '_blank');
+        window.open('https://drive.google.com/file/d/1Z1jLdTRUWRNvrHsUJ-0DNwoca-8bHvN-/view?usp=sharing', '_blank');
         break;
       case 'cd github':
         window.open('https://github.com/ihuebrag', '_blank');
