@@ -20,6 +20,7 @@
             </ul>
           </div>
         </section>
+
         <section class="welcomeSection">
           <h1>Hello World!</h1>
           <div class="commandBox">
@@ -36,36 +37,39 @@
         </section>
 
       <app-floating-menu></app-floating-menu>
-        
+
         <section #projectsHeader class="projectsHeader">
           <h1 class="projectTitle"> Projects </h1>
         </section>
-        <section class="projects-container">
-          <div *ngFor="let project of projectsTemplateList" class="card">
-              <div class="card_content">
-                <div *ngIf="project.id % 2 !== 0" class="card_image">
-                  <img [src]="project?.photo" alt="{{ project.name }} project photo">
-                </div>
-                <div class="card_info" style="align-items: left;">
-                  <h2 class="card_title"> {{project.name}}</h2>
-                  <p class="card_date">Date Started: {{ project.dateStarted }}</p>
-                  <p class="card__description" [innerHTML]="project.description"></p>
-                  <div class="bottomPanel"> 
-                    <div class="skillImg">
-                      <img *ngFor="let skill of project.skills" [src]="'/assets/skills/' + skill.toLowerCase() + '.png'" alt="{{skill}}">
-                    </div>
-                    <div class="links">
-                      <p *ngIf="project.linkToProject"><a [href]="project.linkToProject" target="_blank">Visit Project</a></p>
-                      <p><a [href]="project.linkToGithub" target="_blank">View Project GitHub</a></p>
+        <div class="section">
+          <section class="projects-container">
+            <div *ngFor="let project of projectsTemplateList" class="card">
+                <div class="card_content">
+                  <div *ngIf="project.id % 2 !== 0" class="card_image">
+                    <img [src]="project?.photo" alt="{{ project.name }} project photo">
+                  </div>
+                  <div class="card_info" style="align-items: left;">
+                    <h2 class="card_title"> {{project.name}}</h2>
+                    <p class="card_date">Date Started: {{ project.dateStarted }}</p>
+                    <p class="card__description" [innerHTML]="project.description"></p>
+                    <div class="bottomPanel"> 
+                      <div class="skillImg">
+                        <img *ngFor="let skill of project.skills" [src]="'/assets/skills/' + skill.toLowerCase() + '.png'" alt="{{skill}}">
+                      </div>
+                      <div class="links">
+                        <p *ngIf="project.linkToProject"><a [href]="project.linkToProject" target="_blank">Visit Project</a></p>
+                        <p><a [href]="project.linkToGithub" target="_blank">View Project GitHub</a></p>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div *ngIf="project.id % 2 == 0" class="card_image">
-                  <img [src]="project?.photo" alt="{{ project.name }} project photo">
-                </div>
+                  <div *ngIf="project.id % 2 == 0" class="card_image">
+                    <img [src]="project?.photo" alt="{{ project.name }} project photo">
+                  </div>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
+
 
         <!--
         <h1 class="ContactTitle">Contact Info</h1>
