@@ -37,10 +37,7 @@
   z-index: 1;
 }
 
-#userInputContainer {
-  position: relative;
-  z-index: 5;
-}
+
 
 
 .main {
@@ -122,7 +119,7 @@
   color: rgb(255, 255, 255);
   height: 100vh;
   position: relative;
-  z-index: 3; /* Set z-index to ensure it's above the particles */
+
 }
 
 .welcomeSection h1 {
@@ -131,6 +128,8 @@
   grid-column: span 3;
   font-weight: 700;
   text-align: left;
+  position: relative;
+  z-index: 3;
 }
 
 .black-background {
@@ -139,6 +138,8 @@
   width: 100%;
   position: absolute;
   z-index: 0;
+  min-height: 100%;
+  padding: none;
 }
 
 .commandBox {
@@ -162,11 +163,21 @@
   font-weight: 400;
 }
 
+#userInputContainer {
+  min-width: 100%;
+  display: flex;
+  align-items: left;
+  position: relative;
+  z-index: 5;
+}
+
 #userInput {
+  min-width: 100%;
+  margin-left: 10px; /* Adjust padding if needed */
+  box-sizing: border-box; /* Ensures padding is included in the width */
   background-color: transparent;
   border: none;
   font-size: 20px; /* Font size of the text */
-  width: 275px; /* Width of the input box */
   color: white;
   caret-shape: block;
 }
@@ -183,8 +194,10 @@
   content: "";
   width: 10px;
   height: 25px;
+  margin-left: 10px;
+  margin-bottom: 5px;
   background: #d3d3d3;
-  display: inline-block;
+  display:flex;
   animation: cursor-blink 1.5s steps(2) infinite;
 }
 
@@ -511,7 +524,16 @@
   }
 
   @media (max-width: 1000px) {
-    #userInput {    
-      font-size: 17px;
+
+    .black-background {
+      background-color: rgb(0, 0, 0);
+      height: 100%; /* not doing what i need it to*/
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
     }
+    
+    
   }

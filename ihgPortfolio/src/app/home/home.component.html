@@ -22,8 +22,8 @@
         </section>
 
         <div class="black-background"></div>
-
         <section class="welcomeSection">
+          
           <h1>Hello World!</h1>
           <div class="commandBox">
             <p>
@@ -33,7 +33,7 @@
               <br><br>  <span style="color:#32cbf1"> $ </span> Feel free to look around and connect with me! <br><br>
             </p> 
             <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
-              <span id="userInputContainer"><span style="color:#32cbf1"> $ </span><input type="text" id="userInput" name="section" placeholder="Type your command here..." ngModel required></span>
+              <span id="userInputContainer"><span style="color:#32cbf1"> $ </span><input type="text" id="userInput" name="section" placeholder="Type a command here..." ngModel required></span>
             </form> 
           </div>
         </section>
