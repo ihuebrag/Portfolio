@@ -141,3 +141,16 @@ body {
         
     }
 }
+
+@media (max-width: 500px) {
+    .aboutContent p {
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+    .educationContent p {
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+}

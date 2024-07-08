@@ -487,8 +487,6 @@
         font-weight: 300;
       }
 
-
-
       .card_content {
         display: grid;
         grid-template-columns: 1;
@@ -507,9 +505,10 @@
         padding: 5%;
       }
 
-
-
-
+      .card p {
+        font-size: 18px;
+        font-weight: 300;
+      }
 
   }
 

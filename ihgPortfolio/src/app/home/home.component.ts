@@ -84,7 +84,7 @@ export class HomeComponent implements AfterViewInit{
   @ViewChild('welcomeSection') welcomeSection!: ElementRef;
 
   ngAfterViewInit(): void {
-    
+    // height of black background adjusts -> important for phone view
     const welcomeSectionHeight = this.welcomeSection.nativeElement.offsetHeight;
     this.blackBackground.nativeElement.style.height = `${welcomeSectionHeight}px`;
 
