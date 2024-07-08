@@ -30,6 +30,22 @@ export class HomeComponent implements AfterViewInit{
   
   projectsTemplateList : ProjectsTemplate[] = [
     {
+      id: 0,
+      name: "Portfolio",
+      dateStarted: "June 2024",
+      photo: "/assets/PortfolioProjectSS.jpeg",
+      linkToProject: "https://ihgsportfolio.web.app/home",
+      linkToGithub: "https://github.com/ihuebrag/Portfolio",
+      description: `
+      <span class="highlight"> $ Description: </span> Portfolio that showcases my projects, education, and resume. Made to look like the Command Prompt.<br>
+      <span class="highlight"> $ Skills: </span><br>
+      + <span class="highlight">[CSS, HTML]</span> For front-end development.<br>
+      + <span class="highlight">[Angular, TypeScript]</span> For backend processing and automation.<br>
+      <span class="highlight"> $ Results: </span> A creative website where others can learn a bit more about my work in Computer Science.<br>
+      `,
+      skills: ["TypeScript", "Angular", "CSS", "HTML"],
+    },
+    {
       id: 1,
       name: "Good Morning",
       dateStarted: "May 2024",
