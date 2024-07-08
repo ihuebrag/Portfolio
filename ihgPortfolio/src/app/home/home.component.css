@@ -446,7 +446,7 @@
   }
   */
 
-  @media screen and (max-width: 500px) {
+  @media (max-width: 500px) {
 
       /* .disclaimer h3 {
         font-size: 18px;
@@ -459,7 +459,35 @@
 
       .welcomeSection {
         padding-top: 120px;
+        position: relative;
+        overflow: hidden; /* Ensures the background does not overflow */
+        padding-bottom: 5%;
       }
+
+      .welcomeSection h1 {
+        font-size: 45px;
+        text-align: center;
+      }
+
+      .black-background {
+        background-color: rgb(0, 0, 0);
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+      }
+
+      .commandBox {
+        font-size: 18px;
+        font-weight: 300;
+      }
+      #userInput {
+        font-size: 18px;
+        font-weight: 300;
+      }
+
+
 
       .card_content {
         display: grid;
@@ -478,6 +506,10 @@
       .card {
         padding: 5%;
       }
+
+
+
+
 
   }
 

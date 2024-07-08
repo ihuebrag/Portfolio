@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewChecked, AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProjectsComponent } from '../projects/projects.component';
 import { ProjectsTemplate } from '../projects-template';
@@ -26,7 +26,7 @@ declare var particlesJS: any;
   styleUrls: ['./home.component.css']
 })
 
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit{
   
   projectsTemplateList : ProjectsTemplate[] = [
     {
@@ -80,8 +80,16 @@ export class HomeComponent {
     },
   ];
 
+  @ViewChild('blackBackground') blackBackground!: ElementRef;
+  @ViewChild('welcomeSection') welcomeSection!: ElementRef;
 
   ngAfterViewInit(): void {
+    
+    const welcomeSectionHeight = this.welcomeSection.nativeElement.offsetHeight;
+    this.blackBackground.nativeElement.style.height = `${welcomeSectionHeight}px`;
+
+
+
     // smooth scrolling
     const sections = document.querySelectorAll('.section');
 
