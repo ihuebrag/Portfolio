@@ -374,8 +374,8 @@
   }
 
   .skillImg img {
-    width: 50px;
-    height: 50px;
+    max-width: 50px;
+    max-height: 50px;
     flex: 0 1 calc(33.333% - 32px);
     box-sizing: border-box;
   }
